@@ -1,25 +1,22 @@
-mano1 = int(input("jugador1\n"))
-mano1_eleccion = opciones[mano1 - 1]
-option = ["piedra", "tijera", "papel",]
-
-mano_computador = random.choice(opciones)
-
-print("Mi mano: ", mano1_eleccion)
-print("Mano del computador:", mano_computador)
-
-if (mano1_eleccion == mano_computador):
-  print("Empatan jugadores")
-user_input = int(input("jugador\n"))
+import random
+print("bienvenido al juego del cachipun")
+print("selecciona tu opción")
+print("1 para piedra")
+print("2 para tijera")
+print("3 para papel")
+user_input = int(input("jugador1\n"))
+options = ["piedra", "tijera", "papel",]
 user_option = options[user_input - 1]
 
-computer_option = random.choice(option)
+computer_option = random.choice(options)
 
-print("mi mano:", user option)
-print("mano del computador:",computer_option)
+print("Mi mano: ", user_option)
+print("Mano del computador:", computer_option)
 
-elif (mano1_eleccion == "piedra" and mano_computador == "tijera") or(mano1_eleccion == "tijera" and mano_computador == "papel") or (mano1_eleccion == "papel" and mano_computador == "piedra"):
-  print("Felicitaciones! ganaste la partida")
-    
+if(user_option == computer_option):
+  print("Empatan jugadores")
+elif(user_option == "piedra" and computer_option == "tijera") or(user_option == "tijera" and computer_option == "papel") or (user_option == "papel" and computer_option == "piedra"):
+  print("Felicitaciones! ganaste la partida")    
 else:
     print("Lo siento! el computador ha ganado")
 
